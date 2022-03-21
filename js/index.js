@@ -3,7 +3,7 @@ function convert(number, radix) {
 }
 var targetRadix = [2, 8, 10, 16];
 var tpl = baidu.template('t:result');
-setInterval(function (e) {
+document.getElementById('submit').addEventListener('click', function (e) {
     e.preventDefault();      
     var radix = parseInt($('#radix').val(), 10);
     var number = parseInt($('#number').val(), radix);
@@ -17,4 +17,4 @@ setInterval(function (e) {
         });
         $result.append(html);
     }
-}, 1);
+}, false);
